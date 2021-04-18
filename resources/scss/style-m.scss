@@ -1,0 +1,83 @@
+.dashboard{
+    padding: 20px;
+
+&__balance{
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+    &--item{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+     
+    }
+}
+&__stadistics{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    &--item{
+        width: 70%;
+    }
+}
+&__input{
+    
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    
+}    
+&__history{
+    grid-column: 2/3;
+    grid-row: 2/3;        
+}
+
+}
+
+
+
+
+.hero{
+    flex-direction: row;
+    &__img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.step1{
+   
+    &__img{
+        width:50%;
+        margin:0 auto;
+   
+       
+    }
+}
+.step2{
+   
+    &__img{
+        width:50%;
+        margin:0 auto;
+   
+       
+    }
+}
+
+.step3{
+   
+    &__img{
+        width:50%;   
+        margin:0 auto;
+       
+    }
+}
