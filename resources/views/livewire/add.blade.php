@@ -86,7 +86,7 @@
                 Manten al día tu billetera. 
             </h3>
             <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-200">
-                Ingersa los ingresos que percibiste, con el boton verde y los gastos con el boton morado  <a href="">aqui.</a> 
+                Ingresa los ingresos que percibiste, con el boton verde y los gastos con el boton morado 
             </p>
         </div>
         <div class="dashboard__input--mount">

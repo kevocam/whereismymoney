@@ -30,7 +30,7 @@
                     </div>
                     <div class=" sm:block sm:w-1/3 lg:w-3/5 hero__img ">
                         
-                        <img src="./img/money.png" alt="">
+                        <img src="./img/money.png" alt="money">
                     </div>
                 </div>
             </div>           
@@ -60,7 +60,7 @@
                 <p class="step1__content--content text-sm sm:text-base text-gray-700 dark:text-white">Nuestros servicios son completamente gratis. Si te es de ayuda compartelo </p>
             </div>
             <div class="step1__img">
-                <img src="./img/register.png" alt="">
+                <img src="./img/register.png" alt="register">
             </div>
         </section>
         <section class="step2">
@@ -74,7 +74,7 @@
                 </p>
             </div>
             <div class="step2__img">
-                <img src="./img/spend.png" alt="">
+                <img src="./img/spend.png" alt="gastos">
             </div>
             
 
@@ -88,7 +88,7 @@
                 <p class="step3__content--content text-sm sm:text-base text-gray-700 dark:text-white"> Completa toda la configuracion, fuentes de ingresos (sueldo, proyectos), gastos fijos (agua, luz) </p>
             </div>
             <div class="step3__img">
-                <img src="./img/custom.png" alt="">
+                <img src="./img/custom.png" alt="customizar">
             </div>
             
 
