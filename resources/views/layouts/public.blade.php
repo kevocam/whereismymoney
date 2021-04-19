@@ -32,6 +32,19 @@
                       </svg>
 
                 </div>
+                <div id="menuMobile" class="" hidden>
+                    <div>
+                        <a href="/login" class="py-2 px-6 font-bold flex hover:text-indigo-500">
+                            Ingresar
+                        </a>
+                        
+                    </div>
+                    <div>
+                        <a href="/register" class="py-2 px-6 font-bold flex hover:text-indigo-500 ">
+                            Registrar
+                        </a>
+                    </div>
+                </div>
                 <div class="flex items-center">
                     <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
                         <a href="/login" class="py-2 px-6 font-bold flex hover:text-indigo-500">
@@ -42,7 +55,7 @@
                         </a>
                         
                     </nav>
-                    <button class="lg:hidden flex flex-col ml-4">
+                    <button id="btn" class="lg:hidden flex flex-col ml-4">
                         <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
                         </span>
                         <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
@@ -111,6 +124,16 @@
 </footer>
 
 
-    
+    <script>
+        let btn = document.querySelector("#btn");
+        let menu = document.querySelector("#menuMobile")
+        btn.addEventListener("click", () =>{
+            if(menu.style.display == "block"){
+                menu.style.display="none"
+            }else{
+                menu.style.display="block"
+            }
+        })
+    </script>
 </body>
 </html>

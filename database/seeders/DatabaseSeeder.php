@@ -14,11 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         \App\Models\User::create([
-             "name"=>"kevin Admin",
-             "email"=>"kevocam.seo@gmail.com",
-             "password"=>Hash::make("123456")
-         ]);
+         
         
     }
 }
