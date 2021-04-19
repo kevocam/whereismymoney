@@ -59,7 +59,7 @@ class Add extends Component
         Operation::create([
             "monto"=>$this->mount,
             "description" =>$this->description,
-            "wallet_id"=>1,
+            "wallet_id"=>$this->getWalletId(),
             "type"=>false
         ]);
         $montoWallet = Wallet::find(1);
@@ -72,7 +72,7 @@ class Add extends Component
 
     }
     public function history(){
-        $this->history = Operation::where('wallet_id', $this->getWalletId())->latest()->take(4)->get();
+        $this->history = Operation::where('wallet_id', $this->getWalletId())->latest()->take(10)->get();
     }
 
     public function render()

@@ -34,7 +34,12 @@
 }    
 &__history{
     grid-column: 2/3;
-    grid-row: 2/3;        
+    grid-row: 2/3; 
+    &--item{
+        &--list{
+            max-height: 320px;
+        }
+    }       
 }
 
 }

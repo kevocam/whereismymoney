@@ -1,8 +1,8 @@
 <div class="dashboard">
 
     <div class="dashboard__balance">
-        <div class=" shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800 dashboard__balance--item">
-            <div class="flex items-center">
+        <div class=" shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800  lg:w-1/3 md:w-1/3 dashboard__balance--item">
+            <div class="flex items-center ">
                 <span class="rounded-xl relative p-2 bg-green-300">
                     {{-- <svg fill="currentColor"  class="text-purple-500 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1362 1185q0 153-99.5 263.5t-258.5 136.5v175q0 14-9 23t-23 9h-135q-13 0-22.5-9.5t-9.5-22.5v-175q-66-9-127.5-31t-101.5-44.5-74-48-46.5-37.5-17.5-18q-17-21-2-41l103-135q7-10 23-12 15-2 24 9l2 2q113 99 243 125 37 8 74 8 81 0 142.5-43t61.5-122q0-28-15-53t-33.5-42-58.5-37.5-66-32-80-32.5q-39-16-61.5-25t-61.5-26.5-62.5-31-56.5-35.5-53.5-42.5-43.5-49-35.5-58-21-66.5-8.5-78q0-138 98-242t255-134v-180q0-13 9.5-22.5t22.5-9.5h135q14 0 23 9t9 23v176q57 6 110.5 23t87 33.5 63.5 37.5 39 29 15 14q17 18 5 38l-81 146q-8 15-23 16-14 3-27-7-3-3-14.5-12t-39-26.5-58.5-32-74.5-26-85.5-11.5q-95 0-155 43t-60 111q0 26 8.5 48t29.5 41.5 39.5 33 56 31 60.5 27 70 27.5q53 20 81 31.5t76 35 75.5 42.5 62 50 53 63.5 31.5 76.5 13 94z">
@@ -86,8 +86,10 @@
                 Manten al día tu billetera. 
             </h3>
             <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-200">
-                Ingresa los ingresos que percibiste, con el boton verde y los gastos con el boton morado 
+                Ingresa los ingresos que percibiste, con el boton verde y los gastos con el boton morado. 
+                
             </p>
+            <em class="max-w-2xl text-gray-400">*Agregar una descripción ayuda a recordar. </em>
         </div>
         <div class="dashboard__input--mount">
             <div class=" relative ">
@@ -138,16 +140,16 @@
         </div>
     </div>
     <div class="dashboard__history">
-        <div class="container flex flex-col mx-auto w-full items-center justify-center">
+        <div class="container flex flex-col mx-auto w-full items-center justify-center dashboard__history--item">
             <div class="px-4 py-5 sm:px-6 w-full border dark:bg-gray-800 bg-white shadow mb-2 rounded-md">
                 <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                     Últimos movimientos
                 </h3>
                 <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-200">
-                    Puedes todo el historial  <a href="">aqui.</a> 
+                    Todas las operaciones con fecha y detalle. 
                 </p>
             </div>
-            <ul class="flex flex-col">
+            <ul class="flex flex-col overflow-y-auto dashboard__history--item--list">
                 @foreach ($history as $data)
                 <li class="border-gray-400 flex flex-row mb-2">
                     <div class="shadow border select-none cursor-pointer bg-white dark:bg-gray-800 rounded-md flex flex-1 items-center p-4">

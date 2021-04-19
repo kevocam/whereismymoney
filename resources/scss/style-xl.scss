@@ -56,3 +56,29 @@
        
     }
 }
+.dashboard{
+    &__input{
+        width:80%;
+        place-self:end;
+    }
+    &__history{
+        width:80%;
+        place-self:start;
+    }
+    &__balance{
+        &--item{
+            width: 35%;
+            place-self: end;    
+
+        }  
+       
+    }
+    &__stadistics{
+        &--item{
+            width: 35%;
+            
+
+        }  
+       
+    }
+}

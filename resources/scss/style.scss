@@ -43,11 +43,13 @@ $color-primary: rgba(99, 102, 241 );
 
     }    
     &__history{
-        
-
-
         grid-column: 1/3;
-        grid-row: 3/4;        
+        grid-row: 3/4;    
+        &--item{
+            overflow-y: scroll;
+
+        }
+
     }
 }
 
