@@ -34,25 +34,44 @@
                 </div>
                 <div id="menuMobile" class="" hidden>
                     <div>
+                        @auth
+                        <a href="/dashboard" class="py-2 px-6 font-bold flex hover:text-indigo-500">
+                            Panel de control
+                        </a>
+                        @endauth
+                        @guest
                         <a href="/login" class="py-2 px-6 font-bold flex hover:text-indigo-500">
                             Ingresar
                         </a>
+                        @endguest
                         
                     </div>
                     <div>
+                        @guest
+                            
                         <a href="/register" class="py-2 px-6 font-bold flex hover:text-indigo-500 ">
                             Registrar
                         </a>
+                        @endguest
                     </div>
                 </div>
                 <div class="flex items-center">
+
                     <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
-                        <a href="/login" class="py-2 px-6 font-bold flex hover:text-indigo-500">
-                            Ingresar
+                        @auth
+                        <a href="/dashboard" class="py-2 px-6 font-bold flex hover:text-indigo-500">
+                            Panel de control
                         </a>
-                        <a href="/register" class="py-2 px-6 font-bold flex hover:text-indigo-500 ">
-                            Registrar
-                        </a>
+                     @endauth
+                     @guest
+                     <a href="/login" class="py-2 px-6 font-bold flex hover:text-indigo-500">
+                        Ingresar
+                    </a>
+                    <a href="/register" class="py-2 px-6 font-bold flex hover:text-indigo-500 ">
+                        Registrar
+                    </a>
+                     @endguest
+                        
                         
                     </nav>
                     <button id="btn" class="lg:hidden flex flex-col ml-4">
