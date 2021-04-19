@@ -62,7 +62,7 @@ class Add extends Component
             "wallet_id"=>$this->getWalletId(),
             "type"=>false
         ]);
-        $montoWallet = Wallet::find(1);
+        $montoWallet = Wallet::find($this->getWalletId());
         $montoWallet->saldo = $montoWallet->saldo - $this->mount;
         $montoWallet->save();
         $this->clearInputs();
