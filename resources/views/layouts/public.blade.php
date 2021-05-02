@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ mix('css/style-m.css') }}"  media="(min-width:768px)" >
     <link rel="stylesheet" href="{{ mix('css/style-xl.css') }}"  media="(min-width:1024px)" >
 
-
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
         <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>

@@ -94,12 +94,14 @@
         <div class="dashboard__input--mount">
             <div class=" relative ">
                 <input wire:model.defer="mount" type="number" step="0.01" id="rounded-email" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="100.0"/>
+                @error('mount') <span class="text-indigo-300">{{ $message }}</span> @enderror
             </div>
         </div>
         <div class="dashboard__input--description">
             <label class="text-gray-700" for="name">
                 <textarea wire:model="description" class="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" id="comment" placeholder="Descripcion del movimiento (opcional)" name="comment" rows="5" cols="20">
                 </textarea>
+                @error('description') <span class="text-indigo-300">{{ $message }}</span> @enderror
             </label>
 
         </div>
@@ -111,7 +113,7 @@
                 </p>
             @endif
             @if (session()->has('message2'))
-                <p class="text-purple-500">
+                <p class="text-green-500">
                     {{ session('message2') }}
                 </p>
             @endif
@@ -146,7 +148,7 @@
                     Últimos movimientos
                 </h3>
                 <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-200">
-                    Todas las operaciones con fecha y detalle. 
+                    Todas las operaciones con fecha y detalle.  <a href="/historial">Ver historial completo</a>.
                 </p>
             </div>
             <ul class="flex flex-col overflow-y-auto dashboard__history--item--list">
