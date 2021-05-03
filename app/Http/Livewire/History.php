@@ -15,8 +15,8 @@ class History extends Component
     public $modalOpen = false;
     public $modalDelete = false;
     protected $rules = [
-        'mount' => 'required|min:1|',
-        'description' => 'nullable|max:200',
+        'mountEdit' => 'required|min:1|',
+        'descripcionEdit' => 'nullable|max:200',
     ];
     protected $queryString = ['search'];
 
@@ -26,11 +26,7 @@ class History extends Component
 
 
     public function render()
-    {
-
-
-
-        return view('livewire.history',[
+    {   return view('livewire.history',[
             'historys' => Operation::where('wallet_id', $this->getWalletId())->where('description', 'like', '%'.$this->search.'%')->orderBy('id','desc')->paginate(10),
 
         ]);
@@ -56,6 +52,10 @@ class History extends Component
         $getId = User::find(Auth::user()->id);
         return $getId->wallets->id;
     }
+    public function closeModalDelete(){
+        $this->modalDelete = false;
+
+    }
     public function update($idE){
 
         $this->openModalEdit();
@@ -64,11 +64,7 @@ class History extends Component
         $this->mountEdit = $this->dataEdit->monto;
         $this->descripcionEdit = $this->dataEdit->description;
         $this->dateEdit = $this->dataEdit->created_at;
-    } 
-    public function closeModalDelete(){
-        $this->modalDelete = false;
-
-    }
+    }    
     public function store(){   
         $this->validate();
         $record = Operation::find($this->idEdit);

@@ -22,7 +22,7 @@
             </div>
             <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                 @if (session()->has('message'))
-                <div class="text-green-500">
+                <div class="text-green-700 bg-green-200 py-5">
                     {{ session('message') }}
                 </div>
             @endif
